@@ -1,0 +1,22 @@
+PREDEF:
+  - chap-preface.re
+
+CHAPS:
+  - chap-title-info.re:
+    - chap-info-about.re
+    - chap-info-coc.re
+    - chap-info-sponsors.re
+
+  - chap-title-circle.re:
+    - chap-circle-list.re
+    - chap-circle-layout.re
+    - chap-circle-appeals.re
+
+  - chap-title-sponsor.re:
+    - chap-sponsor-timee.re
+
+  - chap-title-staff.re:
+    - chap-staff-logistics.re
+    
+POSTDEF:
+  - chap-contributors.re
