@@ -7,7 +7,7 @@ CHAPS:
     - chap-info-coc.re
     - chap-info-sponsors.re
 
-  - chap-title-circle.re:
+  - chap-title-timetable.re:
     - chap-circle-list.re
     - chap-circle-layout.re
     - chap-circle-appeals.re
