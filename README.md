@@ -15,7 +15,7 @@
 
 2024年3月初旬　入稿予定日
 
-2024年2月日　公称最終締め切り
+2024年2月20日　公称最終締め切り
 
 2024年1月30日　公称締切
 
@@ -41,7 +41,8 @@ $ docker run --rm -v `pwd`:/work vvakame/review /bin/sh -c "cd /work/articles ; 
 ```
 
 ### bat/shでビルド
-build-print.bat当たりを叩くと/src内にpdfができるよ！
+ローカルにDockerがあれば、
+build-print.batを叩くと/src内にpdfができるよ！
 
 ### 権利
 
