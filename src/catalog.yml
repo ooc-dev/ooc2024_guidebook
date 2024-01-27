@@ -6,6 +6,7 @@ CHAPS:
     - chap-info-about.re
     - chap-info-coc.re
     - chap-info-sponsors.re
+    - chap-info-preparty.re
 
   - chap-title-timetable.re:
     - chap-circle-list.re

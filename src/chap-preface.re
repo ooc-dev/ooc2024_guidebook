@@ -2,7 +2,7 @@
 
 OOC2024にお越しくださり、ありがとうございます。
 
-ariaki酸が何か書く
+ariakiさんが何か書く
 
 //flushright{
 
