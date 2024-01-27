@@ -8,7 +8,7 @@
 
 SOLID原則を理解してもらうために、誰しも必ず通るHelloWorldにまとめてみました。
 
-//source[][java]{
+//list[Code1][Code1:HelloWorld]{
 // メイン(実行クラス)
 public class Main {
     public static void main(String[] args) {
@@ -42,12 +42,14 @@ class SystemPrinter extends Printer{
 }
 //}
 
+//pagebreak
+
 == 解説
 それぞれの、クラスに埋め込まれたSOLID原則について解説していきます。
 
 ==== 開放閉鎖の原則
 ここを変更するだけで、出力方法や出力情報を簡単に変更することができます。
-//source[][java]{
+//list[Code2][Code2:開放閉鎖の原則]{
 // メイン
 public class Main {
     public static void main(String[] args) {
@@ -60,7 +62,7 @@ public class Main {
 ==== インターフェース分離の原則
 FirstSecondDataというように統合することもできますが、"Hello Japan"も表示するようにしたいときなどに無駄な実装が発生してしまいます。
 変更する最小の単位で分けてあるほうが、柔軟な組み合わせで利用することができます。
-//source[][java]{
+//list[Code3][Code3:インターフェース分離の原則]{
 // 出力情報
 interface FirstData { String create(); }
 interface SecondData { String create(); }
@@ -76,7 +78,6 @@ class World implements SecondData {
 }
 //}
 
-//pagebreak
 
 ==== 単一責任の原則
 １つのクラスは、１つの変更で同時に行う処理の集まりとしてまとめましょう。複数のタイミングで変更するものが混じっていると、
@@ -87,7 +88,7 @@ class World implements SecondData {
 
 ==== リスコフの置換原則
 Printerで決めたルール以外のことを実装してしまうと、変更の際に実装を確認する必要が出てきてしまい、バグの要因になるのでやらないようにしましょう。
-//source[][java]{
+//list[Code4][リスコフの置換原則]{
 // 出力処理
 abstract class Printer {
     abstract void print(FirstData first, SecondData second);
@@ -104,3 +105,20 @@ class SystemPrinter extends Printer{
 SOLID原則を意識して作ることで、変更を最小限にしミスを減らすことができると思います。
 
 ==== 今回は、ここまでとさせていただきます。またいつかどこかで(´・ω・`)
+
+　
+
+　
+
+//embed{
+    \begin{minipage}{.1\linewidth}
+        \centering
+        \includegraphics[width=.75\linewidth]{images/contributors/sikimu.png}
+    \end{minipage}
+    \begin{minipage}{.89\linewidth}
+        シキム　@sikimuOji https://twitter.com/sikimuOji\\
+		所属とか(任意)
+    \end{minipage}
+    \hspace{1ex}
+//}
+ひとこと
