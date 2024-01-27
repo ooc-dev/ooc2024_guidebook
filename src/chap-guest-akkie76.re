@@ -277,3 +277,20 @@ NITS	IMOより細かい意見など。修正不要
 == 最後に
 
 このように、レビューコメントを分析し PDCA サイクルを回すことで、技術的課題へのアプローチ方法も見えてきます。また、コードレビューでオブジェクト指向が学べるといった恩恵を受けることできるので、ぜひチームに合ったコードレビューガイドラインを作成してみてはいかがでしょうか。
+
+　
+
+　
+
+//embed{
+    \begin{minipage}{.1\linewidth}
+        \centering
+        \includegraphics[width=.75\linewidth]{images/contributors/akkiee76.jpg}
+    \end{minipage}
+    \begin{minipage}{.89\linewidth}
+        akkie76 https://twitter.com/akkiee76\\
+		所属とか(任意)
+    \end{minipage}
+    \hspace{1ex}
+//}
+ひとこと
