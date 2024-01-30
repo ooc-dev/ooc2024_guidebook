@@ -30,7 +30,10 @@ final class EqualsTest extends TestCase
 
 ユニットテストにおいて期待値と実行結果が一致することを確認するassertEqualsメソッドは内部でIsEqualクラスを使用しています。ここでストラテジパターンが活用されています。初めにクラスの関係を確認します。
 
-//graph[images/chap-guest-hirokinoue/strategy.md][mermaid][ストラテジパターン]{
+//embed{
+    \begin{center}
+        \includegraphics[width=0.7\linewidth]{images/chap-guest-hirokinoue/strategy.png}
+    \end{center}
 //}
 
 それでは見てゆきます。IsEqualと、そこで使用されるComparatorに注目します。Comparatorには実装がいくつかあります。IsEqualは実行時のコンテクスト（テストにおける期待値と実行結果の組み合わせ）に応じて実装を選択します。Comparatorからのぞいてみます。
@@ -166,7 +169,10 @@ class FooListener
 
 クラスの関係は以下のようになっています。
 
-//graph[images/chap-guest-hirokinoue/observer.md][mermaid][オブザーバパターン]{
+//embed{
+    \begin{center}
+        \includegraphics[width=0.45\linewidth]{images/chap-guest-hirokinoue/observer.png}
+    \end{center}
 //}
 
 == 3. ビジターパターン@PHP-Parser
@@ -189,8 +195,8 @@ function foo() {
 
 //embed{
 	AST
-    \begin{flushleft}
-        \includegraphics[width=0.6\linewidth]{images/chap-guest-hirokinoue/ast.png}
+     \begin{flushleft}
+       \includegraphics[width=0.6\linewidth]{images/chap-guest-hirokinoue/ast.png}
     \end{flushleft}
 //}
 
@@ -202,7 +208,10 @@ Traverserは一つ一つノードを読み込みます。また、TraverserはVi
 
 //blankline
 
-//graph[images/chap-guest-hirokinoue/visitor.md][mermaid][ビジターパターン]{
+//embed{
+    \begin{center}
+        \includegraphics[width=1\linewidth]{images/chap-guest-hirokinoue/visitor.png}
+    \end{center}
 //}
 
 それでは実装を見てみます。
