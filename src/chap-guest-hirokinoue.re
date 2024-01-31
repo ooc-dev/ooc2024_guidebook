@@ -300,3 +300,21 @@ ASTに限らず、順々に読み込んだものに対して処理を行うケ�
 
 == おわりに
 以上、デザインパターン、インタフェースの使い道について実例を見てきました。あなたが見つけたデザインパターン、オブジェクト指向設計テクニックの生きた事例を紹介していただけるとうれしいです。
+
+
+　
+
+　
+
+//embed{
+    \begin{minipage}{.1\linewidth}
+        \centering
+        \includegraphics[width=.75\linewidth]{images/contributors/hirokinoue.jpg}
+    \end{minipage}
+    \begin{minipage}{.89\linewidth}
+        hirokinoue
+		https://github.com/hirokinoue
+    \end{minipage}
+    \hspace{1ex}
+//}
+株式会社ホワイトプラスでEMをしています。かつてはCOBOLを少々、現在はPHPを少々。静的解析と仲良くなりたい。

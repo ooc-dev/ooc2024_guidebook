@@ -18,6 +18,8 @@ CHAPS:
     - chap-guest-sikimu.re
     - chap-guest-akkie76.re
     - chap-guest-fortran.re
+    - chap-guest-kouno.re
+    - chap-guest-hirokinoue.re
 
   - chap-title-staff.re:
     - chap-staff-logistics.re

@@ -85,3 +85,22 @@ DDDが注目されるようになった背景として、オブジェクト指�
 
 一部エッセンス的に（保身も兼ねて）難しい言葉も使っていますが、言いたかったことは前の1文の通りです。
 雰囲気OOを通して、コスト、バリュー、クオリティのバランスを取った開発ができると良いな、願っています。
+
+　
+
+　
+
+　
+
+//embed{
+    \begin{minipage}{.1\linewidth}
+        \centering
+        \includegraphics[width=.75\linewidth]{images/contributors/kono.png}
+    \end{minipage}
+    \begin{minipage}{.89\linewidth}
+        河野裕隆　https://twitter.com/hk\_it7
+		https://github.com/h-kono-it\\
+    \end{minipage}
+    \hspace{1ex}
+//}
+虎の穴ラボでWebサービスの開発、マネジメントを行っています。Java、Ruby、TypeScript/JavaScript、Vue.jsとフロントもバックも書きますし、AWS等をいじったりもします。何でも屋さんです。
