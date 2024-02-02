@@ -163,7 +163,7 @@ type(vector_2d_type) :: u_aux !! 中間速度
 type(vector_boundary_condition_type) :: BC_u !! 速度境界条件
 type(scalar_boundary_condition_type) :: BC_p !! 圧力境界条件
 
-! initialize
+! 初期化
 u = .init.(u .on. grid)
 p = .init.(p .on. grid)
 
@@ -182,8 +182,8 @@ p = .inverse.(( &
 u = (u_aux - dt/dens*.grad.p) .impose. BC_u !&
 
 ! ファイル出力
-call output(p .as. vtr .to."p")
-call output(u .as. vtr .to."u")
+call output(p .as. vtr .to. "p")
+call output(u .as. vtr .to. "u")
 //}
 
 このように書けたから何なんだ？という意見もあるとは思います．一方で，オブジェクト指向プログラミングができると，実装できるコードの幅が広がります．また，数値計算以外のプログラミングに関する情報は，どうしてもオブジェクト指向プログラミングを前提にしているところもあるため，オブジェクト指向プログラミングに親しむと，それらの情報が理解しやすくなるという利点もあります．少しでも興味があれば取り組んでみてください．
