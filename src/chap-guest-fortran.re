@@ -74,7 +74,6 @@ k\cdot a_n
 私たちは，記号@<m>{+, \cdot}が同じであっても，使われる箇所によってその振る舞いが異なることを理解しています．この振る舞いを，Fortranで実装してみましょう．
 
 //list[list 1][Fortranによるベクトル型の定義]{
-```Fortran
 module type_vector
     use, intrinsic :: iso_fortran_env
     implicit none
@@ -118,7 +117,6 @@ end module type_vector
 このように定義したベクトル型を使ったプログラム例は，@<list>{list2}のようになります．
 
 //list[list2][ベクトル型の使用例]{
-```Fortran
 program main
     use :: type_vector
     implicit none
@@ -157,7 +155,6 @@ Fortranユーザにとってはなじみ深い例を用いて，Fortranにおけ
 著者が開発しているフレームワークを用いると，上記の計算アルゴリズムは@<list>{list3}のように実装されます．数式っぽく書けるところは数式っぽく，そうでないところは自然言語的に記述できるように設計しています．
 
 //list[list3][非圧縮性流れの計算を行うコード例]{
-```Fortran
 type(staggered_uniform_grid_2d_type), target :: grid !! 空間格子
 type(vector_2d_type) :: u !! 速度
 type(scalar_2d_type) :: p !! 圧力
