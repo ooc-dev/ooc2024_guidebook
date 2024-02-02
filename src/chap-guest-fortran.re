@@ -27,7 +27,7 @@ Fortranユーザの興味は数値シミュレーションにあるわけです�
 //}
 
 //noindent
-を一般化した概念としてベクトル空間があります．@<m>{n}次元ベクトル全体の集合を@<m>{V}と書く．@<m>{\boldsymbol{a\}\in V}, @<m>{\boldsymbol{b\}\in V}がそれぞれ縦ベクトル
+を一般化した概念としてベクトル空間があります．@<m>{n}次元ベクトル全体の集合を@<m>{\mathbb{R\}^n}と書く．@<m>{\boldsymbol{a\}\in \mathbb{R\}^n}, @<m>{\boldsymbol{b\}\in \mathbb{R\}^n}がそれぞれ縦ベクトル
 
 //texequation{
 \boldsymbol{a} =
@@ -45,7 +45,7 @@ b_n
 //}
 
 //noindent
-を表し，@<m>{k\in V}とするとき，加法およびスカラ乗法は
+を表し，@<m>{k\in \mathbb{R\}}とするとき，加法およびスカラ乗法は
 
 //texequation{
 \boldsymbol{a} + \boldsymbol{b} =
@@ -66,7 +66,7 @@ k\cdot a_n
 //}
 
 //noindent
-によって定義されます．集合@<m>{V}に加法とスカラ乗法が定義され，ある性質を満たすものをベクトル空間といいます．
+によって定義されます．集合@<m>{\mathbb{R\}^n}に加法とスカラ乗法が定義され，ある性質を満たすものをベクトル空間といいます．
 
 == Fortranによるn次元ベクトルの実装
 さて，上記の@<m>{\boldsymbol{a\} + \boldsymbol{b\}}に用いられる加算演算子@<m>{+}と，要素同士の和@<m>{a_1 + b_1}に用いられる加算演算子@<m>{+}は同じものでしょうか？同様に，@<m>{k\cdot \boldsymbol{a\}}と@<m>{k\cdot a_1}に用いられる乗算演算子@<m>{\cdot}は同じものでしょうか？
