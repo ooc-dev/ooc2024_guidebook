@@ -27,7 +27,7 @@ Fortranユーザの興味は数値シミュレーションにあるわけです�
 //}
 
 //noindent
-を一般化した概念としてベクトル空間があります．@<m>{n}次元ベクトル全体の集合を@<m>{\mathbb{R\}^n}と書く．@<m>{\boldsymbol{a\}\in \mathbb{R\}^n}, @<m>{\boldsymbol{b\}\in \mathbb{R\}^n}がそれぞれ縦ベクトル
+を一般化した概念としてベクトル空間があります．@<m>{n}次元ベクトル全体の集合を@<m>{\mathbb{R\}^n}と書くことにします．@<m>{\boldsymbol{a\}\in \mathbb{R\}^n}, @<m>{\boldsymbol{b\}\in \mathbb{R\}^n}がそれぞれ縦ベクトル
 
 //texequation{
 \boldsymbol{a} =
