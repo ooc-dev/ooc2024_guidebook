@@ -78,6 +78,9 @@ FirstSecondというように統合すると、"Hello World"から"Hello Japan"�
 
 //blankline
 
+//blankline
+
+
 //embed{
     \begin{minipage}{.1\linewidth}
         \centering
