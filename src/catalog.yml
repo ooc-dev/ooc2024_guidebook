@@ -8,11 +8,6 @@ CHAPS:
     - chap-info-sponsors.re
     - chap-info-preparty.re
 
-  - chap-title-timetable.re:
-    - chap-circle-list.re
-    - chap-circle-layout.re
-    - chap-circle-appeals.re
-
   - chap-title-sponsor.re:
     - chap-sponsor-whiteplus.re
     - chap-guest-sikimu.re
