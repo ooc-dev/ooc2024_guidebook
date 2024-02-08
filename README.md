@@ -83,12 +83,13 @@ OOC実行委員会では、あなたの寄稿をお待ちしています。ぜ�
 Dockerを使うのが一番手軽です。
 
 ```sh
-$ docker run --rm -v `pwd`:/work vvakame/review /bin/sh -c "cd /work/articles ; review-pdfmaker config.yml"
+$ docker run --rm -v $PWD/src:/work vvakame/review:3.1 /bin/sh -c "cd /work && review-pdfmaker config-print.yml"
 ```
 
 ### bat/shでビルド
+
 ローカルにDockerがあれば、
-build-print.batを叩くと/src内にpdfができるよ！
+build-print.batやbuild-print.shを叩くとsrc内にpdfができるよ！
 
 ## 権利
 
