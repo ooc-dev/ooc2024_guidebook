@@ -1,7 +1,7 @@
 = 生成AIの不確実性に立ち向かうソフトウェアアーキテクチャ
 
 //flushright{
-Algomatic シゴラクAI カンパニーCTO菊池琢弥 @_pochi
+Algomatic シゴラクAI カンパニーCTO takuya kikuchi @_pochi
 //}
 
 //note{
@@ -144,7 +144,7 @@ UIはChatEngineのインターフェースのみ意識して開発すればよ�
         \includegraphics[width=.75\linewidth]{images/contributors/algomatic-kikuchi.png}
     \end{minipage}
     \begin{minipage}{.89\linewidth}
-        菊池琢弥　@\_pochi https://twitter.com/\_pochi\\
+        takuya-kikuchi　@\_pochi https://twitter.com/\_pochi\\
         株式会社AlgomaticでシゴラクAIカンパニーCTOを務めています。型とドット絵が好きです。
     \end{minipage}
     \hspace{1ex}
