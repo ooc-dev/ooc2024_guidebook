@@ -47,7 +47,7 @@ Clean Architecture における分割手法は、レイヤー（UI、ドメイ�
 
 #### SOLID 原則の復習
 
-Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry) が資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係にDIPが用いられます。
+Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry) の資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係に DIP が用いられます。
 
 これらの基礎が理解できたら、次に「[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)」のドキュメントを読んでみましょう。
 
