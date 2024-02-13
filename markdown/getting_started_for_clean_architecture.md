@@ -1,7 +1,8 @@
 # Clean Architecture 入門
 
 :::note
-当稿は、Algomatic 取締役 CTO の南里(なんり)による [Getting Started for Clean Architecture](https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture) の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
 :::
 
 ## はじめに
@@ -34,15 +35,18 @@ Webアプリケーションの開発フローは一般的に以下のように�
 
 Clean Architecture を利用するもう一つの理由は、設計・実装段階において、上位のプロセスからの影響を最小化できる点にあります。
 
-## Clean Architectureとは
+## Clean Architecture とは
+
 Clean Architecture の最も重要な特徴は、 **依存関係が外部から内部へと制限されている** ことです。これにより、ソフトウェアとしての低結合度と高凝集度を達成することが可能になります。
 
 ![Clean Architectureの概念図](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
 ### 前提知識
+
 Clean Architecture における分割手法は、レイヤー（UI、ドメイン、データなどのレイヤー）に適用されます。Clean Architecture の適用はレイヤードアーキテクチャに限定されませんが、TypeScript を使用したWebアプリケーション開発で高い汎用性を持つため、レイヤーに適用されます。
 
-#### SOLID原則の復習
+#### SOLID 原則の復習
+
 Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry) が資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係にDIPが用いられます。
 
 これらの基礎が理解できたら、次に「[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)」のドキュメントを読んでみましょう。
@@ -299,7 +303,7 @@ Clean Architecture の原則をフロントエンド開発、特に React.js の
 
 ## 参考文献
 
-- [Getting Started for Clean Architecture](https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture)
-- [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry)
-- [お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える](https://qiita.com/takasek/items/70ab5a61756ee620aee6)
+- Getting Started for Clean Architecture: https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
+- The Clean Architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+- solid+cqs+dry: https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry
+- お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える: https://qiita.com/takasek/items/70ab5a61756ee620aee6
