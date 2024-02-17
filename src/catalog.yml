@@ -21,6 +21,7 @@ CHAPS:
     - chap-sponsor-algomatic1.re
     - chap-sponsor-codmon.re
     - chap-sponsor-loglass.re
+    - chap-sponsor-algomatic-cleanarchitecture.re
 
   - chap-title-staff.re:
     - chap-staff-logistics.re
