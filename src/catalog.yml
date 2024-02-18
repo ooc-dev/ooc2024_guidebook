@@ -8,11 +8,6 @@ CHAPS:
     - chap-info-sponsors.re
     - chap-info-preparty.re
 
-  - chap-title-timetable.re:
-    - chap-circle-list.re
-    - chap-circle-layout.re
-    - chap-circle-appeals.re
-
   - chap-title-sponsor.re:
     - chap-sponsor-whiteplus.re
     - chap-guest-sikimu.re
@@ -20,9 +15,19 @@ CHAPS:
     - chap-guest-fortran.re
     - chap-guest-kouno.re
     - chap-guest-hirokinoue.re
+    - chap-guest-mackey0225.re
+    - chap-sponsor-yumemihajimism.re
+    - chap-guest-asami.re
+    - chap-sponsor-algomatic1.re
+    - chap-sponsor-codmon.re
+    - chap-sponsor-loglass.re
+    - chap-sponsor-algomatic-cleanarchitecture.re
+    - chap-sponsor-threeshake.re
 
   - chap-title-staff.re:
     - chap-staff-logistics.re
+    - chap-staff-reception.re
+    - chap-staff-sessionroom.re
     
 POSTDEF:
   - chap-contributors.re

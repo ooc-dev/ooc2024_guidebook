@@ -1,10 +1,14 @@
 = PHP製OSSに見るデザインパターンの具体例3選+α
 
+//flushright{
+hirokinoue
+//}
+
 オブジェクト指向、デザインパターン…概念はなんとなくわかった気がするんだけど、どのように使えばいいのだろうか…？そんな感覚を持ったことが誰しも一度はあるのではないでしょうか？そんな時、具体例を参照することで理解を深められると考えています。そこで、PHP製のOSSに見られる生きた事例3つ+αを紹介したいと思います。
 
 ここで紹介するデザインパターンの実装は、書籍やネットで紹介されているものと完全一致するとは限りませんが、それぞれのパターンが有するべき特徴を持っていると考えています。紙面の都合で、説明に関係のある部分のみを抜粋します。コードの全量はGitHubを参照して下さい。
 
-== 1. ストラテジパターン@PHPUnit
+== ①ストラテジパターン@PHPUnit
 
 以下の特徴を備えたストラテジパターンの一種と捉えて紹介します。
 
@@ -99,7 +103,7 @@ public function getComparatorFor(mixed $expected, mixed $actual): Comparator
 
 //footnote[Factory][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66/src/Factory.php ]
 
-== 2. オブザーバパターン@Laravel
+== ②オブザーバパターン@Laravel
 
 以下の特徴を備えたオブザーバパターンの一種と捉えて紹介します。
 
@@ -175,7 +179,7 @@ class FooListener
     \end{center}
 //}
 
-== 3. ビジターパターン@PHP-Parser
+== ③ビジターパターン@PHP-Parser
 
 以下の特徴を備えたビジターパターンの一種と捉えて紹介します。
 

@@ -63,11 +63,11 @@ OOC2024では前夜祭を開催しました。
 前夜祭はお祭りなのです！
 ということでもちろん食事！そしてお酒が付いてきます！
 
-//indepimage[preparty03][ピンチョス!][scale=0.5]
+//indepimage[preparty03][ピンチョス !][scale=0.5]
 
-//indepimage[preparty04][肉!][scale=0.5]
+//indepimage[preparty04][肉 !][scale=0.5]
 
-//indepimage[preparty05][寿司!][scale=0.5]
+//indepimage[preparty05][寿司 !][scale=0.5]
 
 オードブルはもちろん、肉！寿司！！
 本編懇親会顔負けのラインナップ！！！
