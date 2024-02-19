@@ -1,7 +1,7 @@
 = レビューガイドラインを導入してみよう！
 
 //flushright{
-@akkie76
+佐藤 晶彦 @akkiee76
 //}
 
 == レビューガイドラインの導入の背景
@@ -28,6 +28,8 @@ No	観点	概要
 
 特に、No.1 ~ No.4は、オブジェクト指向の観点で非常に重要な観点といえます。ここからは具体例を踏まえて、実際の使用例を紹介したいと思います。
 
+　
+
 ==== Design（設計）
 
 　
@@ -44,7 +46,7 @@ Design では、主に以下のケースが指摘の対象になります。ア�
  * 低凝集
  * DRY 原則違反 etc.
 
-==== 単一責任の原則違反の例
+===== 単一責任の原則違反の例
 
 以下のコードでは、@<b>{add()} で2つのバリデーションと2つのビジネスロジックが実装されており、単純に「商品を追加する」以外の責務を1つの関数の責務として行われています。この関数自体複数の責務を持ってしまっているため(責務超過)、Design 指摘の対象となります。
 
@@ -197,7 +199,7 @@ return Condition.GOOD
 
 　
 
-//emlist{
+//emlist[定義]{
 変数やクラス、メソッドに責務を意図した明確な名前が付けられているか。英語文法に誤りがないか。typoもこれに含まれる。
 //}
 
@@ -221,6 +223,11 @@ return Condition.GOOD
  * 不適切なアクセス修飾子
  * 表記違反(スネーク、キャメルなど) etc.
 
+　
+
+　
+
+　
 
 ==== Functionality（機能要求）
 
@@ -306,7 +313,8 @@ MUST(Design):ドメインロジックが Controller クラスに実装されて�
         \includegraphics[width=.75\linewidth]{images/contributors/akkiee76.jpg}
     \end{minipage}
     \begin{minipage}{.89\linewidth}
-        akkie76 https://twitter.com/akkiee76\\
+        佐藤 晶彦 @akkiee76 https://twitter.com/akkiee76\\
+		iOS, Android アプリの開発を中心に行なっています。懇親会で皆さんとお話しできることを楽しみにしています。
     \end{minipage}
     \hspace{1ex}
 //}
