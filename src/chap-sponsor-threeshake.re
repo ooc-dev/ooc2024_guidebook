@@ -147,10 +147,10 @@ Camelize<Capitalize<B>>}` : T
 
 この処理は
 
- * @<code>{infer} を使い "_" で T を分割し、前半部分を A、 後半部分を B とキャプチャします( @<code>{>{}`${infer A}_${infer B}} )
+ * @<code>{infer} を使い@<code>{_}で T を分割し、前半部分を A、 後半部分を B とキャプチャします( @<code>{ ${infer A\}_${infer B\} } )
  * B を @<code>{Capitalize} します( @<code>{Capitalize} は先頭文字だけを大文字にする TypeScript にある機能になります )
  * A はそのままで、変換した B を再帰し、連結しています(`${A}${SnakeToCamelize<Capita@<br>{}lize<B>>}`)
- * "_" で分けれないのであれば、そのまま返却します
+ * @<code>{_}で分けれないのであれば、そのまま返却します
 
 そのため camel_case を snakeCaseにできるということです。ただし、これは T に入ってきたものが string を継承している必要があります。つまり object ではいけません。
 
@@ -167,8 +167,8 @@ type SnakeToCamelizeKeys<T extends object> = {
 
  * T の各 key を使って新しい key を作ります( @<code>{key in key of T} )
  * しかし、 key は string であれば camelCase にして反映します( @<code>{as key extends string ? SnakeToCamelize<key>} )
- * key がstringでなければそのまま返却します( @<code>{: key} )
- * T が object であれば、再帰して今までの処理を実施、でなければ、型をそのまま利用して mapping します@<br>{}( @<code>{: T[key] extends object ? SnakeToCamelizeKeys<T[key]> : T[key]} )
+ * key がstringでなければそのまま返却します( @<code>{:key} )
+ * T が object であれば、再帰して今までの処理を実施、でなければ、型をそのまま利用して mapping します@<br>{}( @<code>{:T[key] extends object ? SnakeToCamelizeKeys<T[key]> :T[key]} )
 
 そのため、各 key がリネームされて新しい型が作られるということになります。これらを踏まえれば、ある程度好きなような型の変換ができることになります。
 
