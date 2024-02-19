@@ -90,6 +90,25 @@
 
 　
 
+弊社 BABY JOB では一緒に「子育て世代のママ・パパをサポートし、日本の未来を作る」仲間を募集しています！
+ご興味やご関心がありましたら、下記をご覧ください。（カジュアル面談も行っています！）
+
+ * Wantedly 企業ページ : https://www.wantedly.com/companies/company_9483366
+ * Zenn テックブログ : https://zenn.dev/p/babyjob
+
+//embed{
+    \begin{tabular}{rl}
+        \begin{minipage}{0.45\hsize}
+            \centering
+            \includegraphics[width=4cm]{images/chap-guest-mackey0225/qr_wantedly.png}
+        \end{minipage}
+        \begin{minipage}{0.45\hsize}
+            \centering
+            \includegraphics[width=4cm]{images/chap-guest-mackey0225/qr_zenn.png}
+        \end{minipage}
+    \end{tabular}
+//}
+
 　
 
 //embed{
