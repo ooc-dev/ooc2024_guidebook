@@ -31,7 +31,7 @@ https://www.youtube.com/watch?v=IxQvELUvQgc
 
 結果としてモデリングのアウトプットもストック情報として積み上がっています。
 
-/image[fig-domainmodel][ドメインモデル図][scale=1.0]
+//image[fig-domainmodel][ドメインモデル図][scale=1.0]
 
 === 戦術的DDDの実践
 
