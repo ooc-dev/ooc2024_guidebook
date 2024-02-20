@@ -149,7 +149,7 @@ Camelize<Capitalize<B>>}` : T
 
  * @<code>{infer} を使い@<code>{_}で T を分割し、前半部分を A、 後半部分を B とキャプチャします( @<code>{ ${infer A\}_${infer B\} } )
  * B を @<code>{Capitalize} します( @<code>{Capitalize} は先頭文字だけを大文字にする TypeScript にある機能になります )
- * A はそのままで、変換した B を再帰し、連結しています(`${A}${SnakeToCamelize<Capita@<br>{}lize<B>>}`)
+ * A はそのままで、変換した B を再帰し、連結しています@<br>{}(@<code>{ ${A\}${SnakeToCamelize<Capitalize<B>>\} })
  * @<code>{_}で分けれないのであれば、そのまま返却します
 
 そのため camel_case を snakeCaseにできるということです。ただし、これは T に入ってきたものが string を継承している必要があります。つまり object ではいけません。
