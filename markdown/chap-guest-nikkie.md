@@ -26,13 +26,13 @@ Pythonにあるのは**クラス（`class`）だけ**です。
 ```python
 from abc import ABCMeta, abstractmethod
 
-class RectangleInterface(metaclass=ABCMeta):
+class ShapeInterface(metaclass=ABCMeta):
     @abstractmethod
     def area(self):
         """面積を返す"""
 ```
 
-長方形の抽象基底クラス`RectangleInterface`を定義しました。
+長方形の抽象基底クラス`ShapeInterface`を定義しました。
 これをインターフェースとして使っていきます。
 
 `@abstractmethod`（デコレータ）は**抽象メソッド**を定義します。
@@ -41,7 +41,7 @@ class RectangleInterface(metaclass=ABCMeta):
 Pythonの言語仕様にはインターフェースを実装するという概念がないので、**抽象基底クラスを継承**します。
 
 ```python
-class OrdinaryRectangle(RectangleInterface):
+class Rectangle(ShapeInterface):
     def __init__(self, width, height):
         self._width = width
         self._height = height
@@ -50,8 +50,8 @@ class OrdinaryRectangle(RectangleInterface):
         return self._width * self._height
 ```
 
-具象クラス`OrdinaryRectangle`を示しました。
-`RectangleInterface`を継承しています。
+具象クラス`Rectangle`を示しました。
+`ShapeInterface`を継承しています。
 **具象クラスで`area()`を実装して初めて**、その具象クラスが**インスタンス化**できます。
 この点は他の言語のインターフェースのように見えますね。
 
@@ -62,13 +62,13 @@ class OrdinaryRectangle(RectangleInterface):
 例えば、（インターフェースとして使いたい）抽象基底クラスに**インスタンス変数を持たせてしまった**ことがありました。
 
 ```diff
-class RectangleInterface(metaclass=ABCMeta):
+class ShapeInterface(metaclass=ABCMeta):
 +     def __init__(self, width, height):
 +         self._width = width
 +         self._height = height
 ```
 
-`RectangleInterface`はインターフェースですから、インスタンス変数をもたせるのは変です。
+`ShapeInterface`はインターフェースですから、インスタンス変数をもたせるのは変です。
 他の言語のインターフェースには持たせられないでしょう。
 
 ところが、Pythonでは（抽象基底）クラスをインターフェースとして使っているので、こういった誤った使い方が起こりえます。
