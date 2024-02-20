@@ -1,7 +1,7 @@
 = DDDもスクラムも当たり前な開発組織のその先へ
 
 //flushright{
-	飯田意己
+株式会社ログラス　飯田意己
 //}
 
 //note{
@@ -31,13 +31,13 @@ https://www.youtube.com/watch?v=IxQvELUvQgc
 
 結果としてモデリングのアウトプットもストック情報として積み上がっています。
 
-//image[fig-domainmodel][ドメインモデル図][scale=1.0]
+//image[fig-domainmodel][ドメインモデル図][scale=0.7]
 
 === 戦術的DDDの実践
 
 アーキテクチャとしても初期に設計したアーキテクチャで現在まで開発を続けています。
 
-//image[architecture][アーキテクチャ概要][scale=1.0]
+//image[architecture][アーキテクチャ概要][scale=0.9]
 
 ログラスではSpring Bootを利用しており、レイヤーごとにGradleのProjectで管理しています。
 こうすることでProject間の依存関係を定義することができ、レイヤーごとの責務をコードレベルで守ることができます。
