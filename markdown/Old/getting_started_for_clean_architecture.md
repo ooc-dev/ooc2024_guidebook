@@ -1,7 +1,8 @@
 # Clean Architecture 入門
 
 :::note
-当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture [1] の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
 :::
 
 ## はじめに
@@ -40,17 +41,17 @@ Clean Architecture の最も重要な特徴は、 **依存関係が外部から�
 
 ![Clean Architectureの概念図](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
-> 引用: Robert C. Martin(Uncle Bob), 「The Clean Architecture」, 2012年8月13日, URL: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html (アクセス日: 2022年2月9日)
-
 ### 前提知識
 
 Clean Architecture における分割手法は、レイヤー（UI、ドメイン、データなどのレイヤー）に適用されます。Clean Architecture の適用はレイヤードアーキテクチャに限定されませんが、TypeScript を使用したWebアプリケーション開発で高い汎用性を持つため、レイヤーに適用されます。
 
 #### SOLID 原則の復習
 
-Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry) [2] の資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係に DIP が用いられます。
+Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの [solid+cqs+dry](https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry) の資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係に DIP が用いられます。
+> https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
 
-これらの基礎が理解できたら、次に「[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)」 [3] のドキュメントを読んでみましょう。
+これらの基礎が理解できたら、次に「[The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)」のドキュメントを読んでみましょう。
+> https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
 
 #### レイヤードアーキテクチャにおける依存関係とクラス
 
@@ -101,7 +102,8 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
 
 ### 実装の流れ
 
-実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「[お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える](https://qiita.com/takasek/items/70ab5a61756ee620aee6)」 [4] が参考になります。
+実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「[お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える](https://qiita.com/takasek/items/70ab5a61756ee620aee6)」 が参考になります
+> https://qiita.com/takasek/items/70ab5a61756ee620aee6
 
 1. DTO (Data Transfer Object) の作成
 2. ドメインオブジェクトの作成
@@ -304,7 +306,7 @@ Clean Architecture の原則をフロントエンド開発、特に React.js の
 
 ## 参考文献
 
-- [1] Getting Started for Clean Architecture: https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
-- [2] solid+cqs+dry: https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry
-- [3] The Clean Architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-- [4] お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える: https://qiita.com/takasek/items/70ab5a61756ee620aee6
+- Getting Started for Clean Architecture: https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
+- The Clean Architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+- solid+cqs+dry: https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry
+- お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える: https://qiita.com/takasek/items/70ab5a61756ee620aee6
