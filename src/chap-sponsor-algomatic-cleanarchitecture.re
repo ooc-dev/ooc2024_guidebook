@@ -5,10 +5,13 @@
 //}
 
 //note{
-当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture @<fn>{ref} の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
 
-https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
+
 //}
+
+
+//footnote[ref][https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture]
 
 == はじめに
 
@@ -46,7 +49,7 @@ Clean Architecture の最も重要な特徴は、 @<b>{依存関係が外部か�
 
 //image[CleanArchitecture][Clean Architectureの概念図@<fn>{architecture}][scale=0.6]
 
-//footnote[architecture][https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg より引用]
+//footnote[architecture][引用: Robert C. Martin(Uncle Bob), 「The Clean Architecture」, 2012年8月13日, URL: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html (アクセス日: 2022年2月9日)]
 
 == 前提知識
 
@@ -111,8 +114,8 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
 
 == 実装の流れ
 
-実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「[お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える](https://qiita.com/takasek/items/70ab5a61756ee620aee6)」 が参考になります
-> https://qiita.com/takasek/items/70ab5a61756ee620aee6
+実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える@<fn>{modelare}」 が参考になります
+
 
  1. DTO (Data Transfer Object) の作成
  2. ドメインオブジェクトの作成
@@ -121,6 +124,8 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
  5. UseCase の作成
  6. ViewModel の作成
  7. コンポーネントの作成
+
+//footnote[modelare][お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える https://qiita.com/takasek/items/70ab5a61756ee620aee6]
 
 === DTO (Data Transfer Object) の作成
 
