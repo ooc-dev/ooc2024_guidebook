@@ -59,8 +59,8 @@ Clean Architecture の実装に取り組む前に、SOLID原則の復習が有�
 
 //footnote[scd][solid+cqs+dry (https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry)]
 
-これらの基礎が理解できたら、次に「The Clean Architecture」@<fn>{theCleanArchitecture}のドキュメントを読んでみましょう。
-//footnote[theCleanArchitecture][The Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)]
+これらの基礎が理解できたら、次に「The Clean Architecture」@<fn>{TheCleanArchitecture}のドキュメントを読んでみましょう。
+//footnote[TheCleanArchitecture][The Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)]
 
 === レイヤードアーキテクチャにおける依存関係とクラス
 
@@ -126,7 +126,7 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
 
 DTO は、外部 API やデータベースから取得したデータをアプリケーション内で扱いやすい形に変換するためのオブジェクトです。これにより、API やデータベースのスキーマがアプリケーションの内部表現に直接影響を与えることを防ぎます。
 
-例えば、ユーザー情報を取得するAPIから返される JSON データを表す `UserDTO` を TypeScript で以下のように定義することができます。
+例えば、ユーザー情報を取得するAPIから返される JSON データを表す @<code>{UserDTO} を TypeScript で以下のように定義することができます。
 
 //emlist[]{
 interface UserDTO {
@@ -200,7 +200,7 @@ class UserAdapter {
 
 リポジトリは、ドメインオブジェクトのコレクションに対するアクセスを抽象化するものです。データの取得や保存などの操作を、具体的なデータソースの詳細（例：データベースや外部 API の呼び出し）から分離します。
 
-@<code>{UserRepository}インターフェースを以下のように定義します。
+@<code>{UserRepository} インターフェースを以下のように定義します。
 
 //emlist[]{
 interface UserRepository {
@@ -255,7 +255,7 @@ class UserRepositoryImpl implements UserRepository {
 
 === UseCase の作成
 
-ユースケースは、ユーザーの意図に応じたアプリケーションのビジネスロジックを実装します。例えば、ユーザーがメールアドレスを更新する操作は `UpdateUserEmailUseCase` として定義できます。
+ユースケースは、ユーザーの意図に応じたアプリケーションのビジネスロジックを実装します。例えば、ユーザーがメールアドレスを更新する操作は @<code>{UpdateUserEmailUseCase} として定義できます。
 
 //emlist[]{
 class UpdateUserEmailUseCase {
