@@ -49,14 +49,14 @@ abstract public function accepts(/* 略 */): bool;
 abstract public function assertEquals(/* 略 */): void;
 //}
 
-//footnote[Comparator][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66/src/Comparator.php ]
+//footnote[Comparator][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66 /src/Comparator.php ]
 
 ComparatorはacceptsメソッドやassertEqualsを持つ抽象クラスで、その実装は様々あります。例えば配列を比較するArrayComparator、数値を比較するNumericComparatorなどです。続いてIsEqualのevaluateメソッドを見てみます。
 
 //blankline
 
 //emlist[IsEqual@<fn>{IsEqual}][php]{
-public function evaluate(mixed $other, string $description = '', bool $returnResult = false): ?bool
+public function evaluate(/* 略 */): ?bool
 {
 	// 略
 
@@ -79,7 +79,7 @@ public function evaluate(mixed $other, string $description = '', bool $returnRes
 		);
 //}
 
-//footnote[IsEqual][https://github.com/sebastianbergmann/phpunit/blob/57e07eef9de8e016be8da0f53a35d5df1fa72ebd/src/Framework/Constraint/Equality/IsEqual.php ]
+//footnote[IsEqual][https://github.com/sebastianbergmann/phpunit/blob/57e07eef9de8e016be8da0f53a35d5df1fa72ebd /src/Framework/Constraint/Equality/IsEqual.php ]
 
 //emlist[Factory@<fn>{Factory}][php]{
 // ComparatorFactory::getInstance()からここに辿り着く
@@ -101,7 +101,7 @@ public function getComparatorFor(mixed $expected, mixed $actual): Comparator
 	}
 //}
 
-//footnote[Factory][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66/src/Factory.php ]
+//footnote[Factory][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66 /src/Factory.php ]
 
 == ②オブザーバパターン@Laravel
 
@@ -198,19 +198,19 @@ function foo() {
 //}
 
 //embed{
-	AST
-     \begin{flushleft}
-       \includegraphics[width=0.6\linewidth]{images/chap-guest-hirokinoue/ast.png}
+    \begin{flushleft}
+       \includegraphics[width=0.55\linewidth]{images/chap-guest-hirokinoue/ast.png}
     \end{flushleft}
+	{\small AST}
 //}
+
+//blankline
 
 PHP-ParserにおいてTraverserとVisitorによりビジターパターンが成立しています。Traverserが構造側の処理を担い、Visitorが操作側の処理を担います。
 
 Traverserは一つ一つノードを読み込みます。また、TraverserはVisitorを保持しており、Visitorにノードを処理させます。つまりすべてのノードはTraverserにより辿られ、Vistitorにより処理されます。Visitorには様々な実装があります。例えば、条件を満たすノードを見つけるVisitorやノードの名前を特定するVisitorがあります。構造と操作を分離するというのは、ノードを辿るという処理とノードに対して行う処理を別々に構築できるということです。
 
 まずクラスの関係を確認します。
-
-//blankline
 
 //embed{
     \begin{center}
@@ -248,7 +248,7 @@ class NodeTraverser implements NodeTraverserInterface {
 					$return = $visitor->enterNode($subNode);
 //}
 
-//footnote[NodeTraverser][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3/lib/PhpParser/NodeTraverser.php ]
+//footnote[NodeTraverser][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3 /lib/PhpParser/NodeTraverser.php ]
 
 NodeVisitorのシグネチャは以下の通りです。
 
@@ -263,7 +263,7 @@ interface NodeVisitor {
 }
 //}
 
-//footnote[NodeVisitor][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3/lib/PhpParser/NodeVisitor.php ]
+//footnote[NodeVisitor][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3 /lib/PhpParser/NodeVisitor.php ]
 
 NodeVisitorにはFindingVisitorやNameResolverなど様々な実装があります。Visitorの具象クラスはNodeVisitorを実装する抽象クラスであるNodeVisitorAbstractを拡張して作ります。FindingVisitorを見てみます。beforeTraverseやenterNodeを実装していることがわかります。NameResolverも見ていただくと、これと異なる実装を確認していただけます。
 
@@ -288,7 +288,7 @@ class FindingVisitor extends NodeVisitorAbstract {
 }
 //}
 
-//footnote[FindingVisitor][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3/lib/PhpParser/NodeVisitor/FindingVisitor.php ]
+//footnote[FindingVisitor][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3 /lib/PhpParser/NodeVisitor/FindingVisitor.php ]
 
 NodeTraverserは具象ではなくNodeVisitorに依存するので、NodeVisitorを実装しているあらゆる具象を利用できます。ノードに対して行いたい処理を個別の具象クラスとして定義し、Traverserに渡すことで処理を追加できるということです。不要な処理はTraverserから取り除くこともできます。
 
