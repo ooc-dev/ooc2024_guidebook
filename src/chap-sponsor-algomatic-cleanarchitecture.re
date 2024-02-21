@@ -140,7 +140,7 @@ interface UserDTO {
 
 ドメインオブジェクトは、アプリケーションのビジネスロジックやルールをカプセル化します。DTO とは異なり、ドメインオブジェクトはアプリケーションのコアな部分を形成し、ビジネスロジックを実装します。
 
-上記の @<code>{UserDTO} を基に、ドメインオブジェクト @<code{User} を以下のように作成できます。
+上記の @<code>{UserDTO} を基に、ドメインオブジェクト @<code>{User} を以下のように作成できます。
 
 //emlist[]{
 class User {
@@ -162,9 +162,7 @@ class User {
 
 腐敗防止層（ACL）は、異なるシステムやドメイン間の統合点でドメインモデルを外部の不適切な影響から保護する翻訳層として機能します。 外部 API からのデータをドメインオブジェクトに適応する際に ACL を使用することで、モデルの整合性を維持し、システム間の結合度を低減させ、変更に対して強固な設計を実現します。 TypeScript での ACL 実装では、インターフェース、アダプター、ファサードなどのデザインパターンを用いて、外部データを内部モデルに適合させる変換やフィルタリングを行います。
 
-例えば、外部 API から取得したユーザー情報をドメインオブジェクトに変換する際に、ACL を使用して変換処理を行うことができます。
-
-外部 API からは以下のような形式の JSON データが返されるとします。
+例えば、外部 API から取得したユーザー情報をドメインオブジェクトに変換する際に、ACL を使用して変換処理を行うことができます。外部 API からは以下のような形式の JSON データが返されるとします。
 
 //emlist[]{
 {
@@ -175,7 +173,7 @@ class User {
 }
 //}
 
-このデータを @<code{User} クラスのインスタンスに変換するために、以下のようなアダプターを作成します。
+このデータを @<code>{User} クラスのインスタンスに変換するために、以下のようなアダプターを作成します。
 
 //emlist[]{
 interface ExternalUser {
@@ -187,18 +185,22 @@ interface ExternalUser {
 
 class UserAdapter {
   static fromExternal(externalUser: ExternalUser): User {
-    return new User(externalUser.user_id, `${externalUser.first_name} ${externalUser.last_name}`, externalUser.email);
+    return new User(
+      externalUser.user_id,
+      `${externalUser.first_name} ${externalUser.last_name}`,
+      externalUser.email
+    );
   }
 }
 //}
 
-@<code{UserAdapter} クラスは、外部データを内部モデルに変換するためのアダプターとして機能します。このように、ACL を使用することで、外部データの変換処理をドメインオブジェクトに隔離し、内部モデルの整合性を維持することができます。
+@<code>{UserAdapter} クラスは、外部データを内部モデルに変換するためのアダプターとして機能します。このように、ACL を使用することで、外部データの変換処理をドメインオブジェクトに隔離し、内部モデルの整合性を維持することができます。
 
 === リポジトリの作成
 
 リポジトリは、ドメインオブジェクトのコレクションに対するアクセスを抽象化するものです。データの取得や保存などの操作を、具体的なデータソースの詳細（例：データベースや外部 API の呼び出し）から分離します。
 
-@<code{UserRepository}インターフェースを以下のように定義します。
+@<code>{UserRepository}インターフェースを以下のように定義します。
 
 //emlist[]{
 interface UserRepository {
@@ -337,4 +339,5 @@ Clean Architecture の原則をフロントエンド開発、特に React.js の
     \end{minipage}
     \hspace{1ex}
 //}
-株式会社 Algomatic でシゴラク AI のソフトウェアエンジニアとして、生成 AI 産業の一丁目一番地を目指しています。ランニング🏃‍♂、自転車🚵‍♀、バイク🏍、キャンプ🏕を趣味としています。
+株式会社 Algomatic でシゴラク AI のソフトウェアエンジニアとして、生成 AI 産業の一丁目一番地を目指しています。
+ランニング、自転車、バイク、キャンプを趣味としています。
