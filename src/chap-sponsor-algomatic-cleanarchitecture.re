@@ -5,13 +5,11 @@
 //}
 
 //note{
-当稿は、Algomatic 取締役 CTO の南里(なんり)による Getting Started for Clean Architecture @<fn>{ref} の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
-
-
+当稿は、Algomatic 取締役 CTO の南里(なんり)による 「Getting Started for Clean Architecture」 の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+元の記事は以下の URL から参照できます。@<br>{}
+https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
 //}
 
-
-//footnote[ref][https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture]
 
 == はじめに
 
@@ -49,7 +47,7 @@ Clean Architecture の最も重要な特徴は、 @<b>{依存関係が外部か�
 
 //image[CleanArchitecture][Clean Architectureの概念図@<fn>{architecture}][scale=0.6]
 
-//footnote[architecture][引用: Robert C. Martin(Uncle Bob), 「The Clean Architecture」, 2012年8月13日, URL: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html (アクセス日: 2022年2月9日)]
+//footnote[architecture][Robert C. Martin(Uncle Bob), 「The Clean Architecture」,@<br>{}2012年8月13日, URL: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html]
 
 == 前提知識
 
@@ -57,13 +55,13 @@ Clean Architecture における分割手法は、レイヤー（UI、ドメイ�
 
 === SOLID 原則の復習
 
-Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの @<b>{solid+cqs+dry}@<fn>{scd}の資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係に DIP が用いられます。
+Clean Architecture の実装に取り組む前に、SOLID原則の復習が有用です。kgmyshinさんの 「@<b>{solid+cqs+dry}@<fn>{scd}」の資料が参考になります。特に、依存関係逆転の原則（Dependency Inversion Principle, DIP）はClean Architecture でよく誤解される部分です。レイヤー分割では、ドメインとデータの間の依存関係に DIP が用いられます。
 
 
 //footnote[scd][solid+cqs+dry (https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry)]
 
-これらの基礎が理解できたら、次に「The Clean Architecture」@<fn>{theCleanArchitecture}のドキュメントを読んでみましょう。
-//footnote[theCleanArchitecture][The Clean Architecture(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)]
+これらの基礎が理解できたら、次に 「@<b>{The Clean Architecture}@<fn>{TheCleanArchitecture}」のドキュメントを読んでみましょう。
+//footnote[TheCleanArchitecture][The Clean Architecture@<br>{}(https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)]
 
 === レイヤードアーキテクチャにおける依存関係とクラス
 
@@ -114,7 +112,7 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
 
 == 実装の流れ
 
-実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える@<fn>{modelare}」 が参考になります
+実際の手順とは少し違いますが、初心者でも始めやすいと感じるおすすめの手順は以下です。 用語に関しては、独自解釈でつけている部分がありますが、各ステップで説明します。 「@<b>{お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える}@<fn>{modelare}」 が参考になります
 
 
  1. DTO (Data Transfer Object) の作成
@@ -131,7 +129,7 @@ Clean Architecture の概念を理解したら、実際のプロジェクトで�
 
 DTO は、外部 API やデータベースから取得したデータをアプリケーション内で扱いやすい形に変換するためのオブジェクトです。これにより、API やデータベースのスキーマがアプリケーションの内部表現に直接影響を与えることを防ぎます。
 
-例えば、ユーザー情報を取得するAPIから返される JSON データを表す `UserDTO` を TypeScript で以下のように定義することができます。
+例えば、ユーザー情報を取得するAPIから返される JSON データを表す @<code>{UserDTO} を TypeScript で以下のように定義することができます。
 
 //emlist[]{
 interface UserDTO {
@@ -145,7 +143,7 @@ interface UserDTO {
 
 ドメインオブジェクトは、アプリケーションのビジネスロジックやルールをカプセル化します。DTO とは異なり、ドメインオブジェクトはアプリケーションのコアな部分を形成し、ビジネスロジックを実装します。
 
-上記の @<code>{UserDTO} を基に、ドメインオブジェクト @<code{User} を以下のように作成できます。
+上記の @<code>{UserDTO} を基に、ドメインオブジェクト @<code>{User} を以下のように作成できます。
 
 //emlist[]{
 class User {
@@ -167,9 +165,7 @@ class User {
 
 腐敗防止層（ACL）は、異なるシステムやドメイン間の統合点でドメインモデルを外部の不適切な影響から保護する翻訳層として機能します。 外部 API からのデータをドメインオブジェクトに適応する際に ACL を使用することで、モデルの整合性を維持し、システム間の結合度を低減させ、変更に対して強固な設計を実現します。 TypeScript での ACL 実装では、インターフェース、アダプター、ファサードなどのデザインパターンを用いて、外部データを内部モデルに適合させる変換やフィルタリングを行います。
 
-例えば、外部 API から取得したユーザー情報をドメインオブジェクトに変換する際に、ACL を使用して変換処理を行うことができます。
-
-外部 API からは以下のような形式の JSON データが返されるとします。
+例えば、外部 API から取得したユーザー情報をドメインオブジェクトに変換する際に、ACL を使用して変換処理を行うことができます。外部 API からは以下のような形式の JSON データが返されるとします。
 
 //emlist[]{
 {
@@ -180,7 +176,7 @@ class User {
 }
 //}
 
-このデータを @<code{User} クラスのインスタンスに変換するために、以下のようなアダプターを作成します。
+このデータを @<code>{User} クラスのインスタンスに変換するために、以下のようなアダプターを作成します。
 
 //emlist[]{
 interface ExternalUser {
@@ -192,18 +188,22 @@ interface ExternalUser {
 
 class UserAdapter {
   static fromExternal(externalUser: ExternalUser): User {
-    return new User(externalUser.user_id, `${externalUser.first_name} ${externalUser.last_name}`, externalUser.email);
+    return new User(
+      externalUser.user_id,
+      `${externalUser.first_name} ${externalUser.last_name}`,
+      externalUser.email
+    );
   }
 }
 //}
 
-@<code{UserAdapter} クラスは、外部データを内部モデルに変換するためのアダプターとして機能します。このように、ACL を使用することで、外部データの変換処理をドメインオブジェクトに隔離し、内部モデルの整合性を維持することができます。
+@<code>{UserAdapter} クラスは、外部データを内部モデルに変換するためのアダプターとして機能します。このように、ACL を使用することで、外部データの変換処理をドメインオブジェクトに隔離し、内部モデルの整合性を維持することができます。
 
 === リポジトリの作成
 
 リポジトリは、ドメインオブジェクトのコレクションに対するアクセスを抽象化するものです。データの取得や保存などの操作を、具体的なデータソースの詳細（例：データベースや外部 API の呼び出し）から分離します。
 
-@<code{UserRepository}インターフェースを以下のように定義します。
+@<code>{UserRepository} インターフェースを以下のように定義します。
 
 //emlist[]{
 interface UserRepository {
@@ -246,11 +246,13 @@ class UserRepositoryImpl implements UserRepository {
 
   async findById(id: string): Promise<User> {
     const userDTO = await this.dataStore.fetchUserById(id);
-    return new User(userDTO.id, userDTO.username, userDTO.email); // DTOからドメインオブジェクトへの変換
+    // DTOからドメインオブジェクトへの変換
+    return new User(userDTO.id, userDTO.username, userDTO.email);
   }
 
   async save(user: User): Promise<void> {
-    const userDTO: UserDTO = { id: user.id, username: user.username, email: user.email }; // ドメインオブジェクトからDTOへの変換
+    // ドメインオブジェクトからDTOへの変換
+    const userDTO: UserDTO = { id: user.id, username: user.username, email: user.email };
     await this.dataStore.postUser(userDTO);
   }
 }
@@ -258,7 +260,7 @@ class UserRepositoryImpl implements UserRepository {
 
 === UseCase の作成
 
-ユースケースは、ユーザーの意図に応じたアプリケーションのビジネスロジックを実装します。例えば、ユーザーがメールアドレスを更新する操作は `UpdateUserEmailUseCase` として定義できます。
+ユースケースは、ユーザーの意図に応じたアプリケーションのビジネスロジックを実装します。例えば、ユーザーがメールアドレスを更新する操作は @<code>{UpdateUserEmailUseCase} として定義できます。
 
 //emlist[]{
 class UpdateUserEmailUseCase {
@@ -320,10 +322,10 @@ Clean Architecture の原則をフロントエンド開発、特に React.js の
 
 === 参考文献
 
- * Getting Started for Clean Architecture: https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
- * The Clean Architecture: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+ * Getting Started for Clean Architecture:@<br>{}https://github.com/neonankiti/CleanArchitectureSample/wiki/Getting-Started-for-Clean-Architecture
+ * The Clean Architecture:@<br>{}https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
  * solid+cqs+dry: https://speakerdeck.com/kgmyshin/solid-plus-cqs-plus-dry
- * お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える: https://qiita.com/takasek/items/70ab5a61756ee620aee6
+ * お前らがModelと呼ぶアレをなんと呼ぶべきか。近辺の用語(EntityとかVOとかDTOとか)について整理しつつ考える:@<br>{}https://qiita.com/takasek/items/70ab5a61756ee620aee6
 
 
 　
@@ -342,4 +344,5 @@ Clean Architecture の原則をフロントエンド開発、特に React.js の
     \end{minipage}
     \hspace{1ex}
 //}
-株式会社 Algomatic でシゴラク AI のソフトウェアエンジニアとして、生成 AI 産業の一丁目一番地を目指しています。ランニング🏃‍♂、自転車🚵‍♀、バイク🏍、キャンプ🏕を趣味としています。
+株式会社 Algomatic でシゴラク AI のソフトウェアエンジニアとして、生成 AI 産業の一丁目一番地を目指しています。
+ランニング、自転車、バイク、キャンプを趣味としています。
