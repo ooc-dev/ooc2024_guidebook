@@ -98,8 +98,8 @@ DDDが注目されるようになった背景として、オブジェクト指�
         \includegraphics[width=.75\linewidth]{images/contributors/kono.png}
     \end{minipage}
     \begin{minipage}{.89\linewidth}
-        河野裕隆　https://twitter.com/hk\_it7
-		https://github.com/h-kono-it\\
+        河野裕隆　https://twitter.com/hk\_it7\\
+		https://github.com/h-kono-it
     \end{minipage}
     \hspace{1ex}
 //}

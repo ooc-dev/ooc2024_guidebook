@@ -20,6 +20,20 @@ https://twitter.com/astah_ja
 
 //embed{
 \begin{center}
+    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/bengo4.png}
+\end{center}
+//}
+
+@<em>{弁護士ドットコム株式会社}
+
+https://www.bengo4.com/corporate/
+
+https://twitter.com/bengo4_creators
+
+「プロフェッショナル・テックで、次の常識をつくる。」をミッションとして、人々と専門家をつなぐポータルサイト「弁護士ドットコム」「税理士ドットコム」「BUSINESS LAWYERS」、契約マネジメントプラットフォーム「クラウドサイン」を提供しています。
+
+//embed{
+\begin{center}
     \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/gmo.png}
 \end{center}
 //}
@@ -34,19 +48,7 @@ https://twitter.com/GMOdev
 GMOインターネットグループは、1995年にインターネット事業を開始して以来、「すべての人にインターネット」をコーポレートスローガンに掲げ、インターネットをより使いやすく、より豊かに、より楽しくするサービスの提供に努めてまいりました。私たちはこれらのサービスを通じて、新たなインターネット文化・産業を創造し、お客様に感動と笑顔を届け、社会と人々に貢献することを目指しています。
 
 
-//embed{
-\begin{center}
-    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/bengo4.png}
-\end{center}
-//}
 
-@<em>{弁護士ドットコム株式会社}
-
-https://www.bengo4.com/corporate/
-
-https://twitter.com/bengo4_creators
-
-「プロフェッショナル・テックで、次の常識をつくる。」をミッションとして、人々と専門家をつなぐポータルサイト「弁護士ドットコム」「税理士ドットコム」「BUSINESS LAWYERS」、契約マネジメントプラットフォーム「クラウドサイン」を提供しています。
 
 //embed{
 \begin{center}

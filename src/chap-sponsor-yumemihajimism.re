@@ -112,7 +112,7 @@ const ProfileCard: FC<Props> = ({ profile }) => {
 この場ではコードの書き方の話はさておき、少し遠目で見てイメージを喚起することに意識を向けてみてください。
 
  * @<code>{interface Props} に続く @<code>{{ profile: Profile \}}の部分が、コンポーネント記述の中の @<code>{FC<Props>}に続く @<code>{{ profile \}} と対応していること
- * @<code>{FC<Props>}という ProfileCard コンポーネントに対する型注釈が OOUI = f(model) の右辺のイメージとぴったり重なること（FC が f、Props が model にあたります）
+ * @<code>{FC<Props>}という ProfileCard コンポーネントに対する型注釈が @<code>{OOUI = f(model) }の右辺のイメージとぴったり重なること（FC が f、Props が model にあたります）
 
 //noindent
 などがわかると、「OOUI を関数で考える」のイメージがなんとなく伝わってきます（はい、この説明だけでは中々わかりません、すみません）。
@@ -243,12 +243,13 @@ const ProfileCard: FC<Props> = ({ profile }) => {
 
 一緒に勉強会を作ってくれたデザイナー 2 人がその経験を素敵な note に残しているので、そちらもぜひ御覧ください。
 
-UI デザイナー 1 年生がコードを書いてみた！-コードから GUI を見てみる-｜こばやし　めいか https://note.com/meika_1123/n/nc61184d6588f
+ * UI デザイナー 1 年生がコードを書いてみた！-コードから GUI を見てみる-｜こばやし　めいか https://note.com/meika_1123/n/nc61184d6588f
 
-デザイナーとエンジニアのタンゴ  ｜ osamu https://note.com/onaka_pocopoco/n/nfb6ee80f12d7
+ * デザイナーとエンジニアのタンゴ  ｜ osamu https://note.com/onaka_pocopoco/n/nfb6ee80f12d7
 
 たった 3 人で始めた勉強会ですが、徐々に和を広げていけたらなと考えています。OOUI を用いたデザイナーとエンジニアの協業に興味のある皆さん、ぜひお声がけください。
 
+　
 
 　
 

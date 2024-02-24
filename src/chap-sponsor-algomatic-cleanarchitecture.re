@@ -281,7 +281,6 @@ ViewModel は、ビュー（UI）に表示するデータとロジックを保�
 //emlist[]{
 function useUserViewModel(userUseCase: UpdateUserEmailUseCase) {
   const [user, setUser] = useState<User | null>(null);
-
   const updateUserEmail = async (userId: string, newEmail: string) => {
     await userUseCase.execute(userId, newEmail);
     // ユーザー情報の更新処理など

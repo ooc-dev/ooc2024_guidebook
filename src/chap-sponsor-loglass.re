@@ -6,6 +6,7 @@
 
 //note{
 当稿は Loglass TECH TALK #1 の内容を元に、Object-Oriented Conference 2024 ガイドブック向けに加筆・修正したものとなります。
+
 https://www.youtube.com/watch?v=IxQvELUvQgc
 //}
 
