@@ -209,17 +209,20 @@ const ProfileCard: FC<Props> = ({ profile }) => {
         </div>
 
         <ul className="flex gap-10">
-          <li className="w-40 h-auto bg-blue-100 rounded-lg flex flex-col items-start text-sm p-4">
+          <li className="w-40 h-auto bg-blue-100 rounded-lg flex flex-col items-start text-sm 
+		  p-4">
             {profile.favorits.foods.map((food) => (
               <span>{food}です。</span>
             ))}
           </li>
-          <li className="w-40 h-auto bg-yellow-100 rounded-lg flex flex-col items-start text-sm p-4">
+          <li className="w-40 h-auto bg-yellow-100 rounded-lg flex flex-col items-start text-sm 
+		  p-4">
             {profile.favorits.colors.map((color) => (
               <span>{color}</span>
             ))}
           </li>
-          <li className="w-40 h-auto bg-gray-200 rounded-lg flex flex-col items-start text-sm p-4">
+          <li className="w-40 h-auto bg-gray-200 rounded-lg flex flex-col items-start text-sm 
+		  p-4">
             {profile.favorits.artists.map((artist) => (
               <span>{artist}</span>
             ))}
@@ -243,9 +246,9 @@ const ProfileCard: FC<Props> = ({ profile }) => {
 
 一緒に勉強会を作ってくれたデザイナー 2 人がその経験を素敵な note に残しているので、そちらもぜひ御覧ください。
 
- * UI デザイナー 1 年生がコードを書いてみた！-コードから GUI を見てみる-｜こばやし　めいか https://note.com/meika_1123/n/nc61184d6588f
+ * UI デザイナー 1 年生がコードを書いてみた！-コードから GUI を見てみる-｜こばやし　めいか @<br>{} https://note.com/meika_1123/n/nc61184d6588f
 
- * デザイナーとエンジニアのタンゴ  ｜ osamu https://note.com/onaka_pocopoco/n/nfb6ee80f12d7
+ * デザイナーとエンジニアのタンゴ  ｜ osamu @<br>{} https://note.com/onaka_pocopoco/n/nfb6ee80f12d7
 
 たった 3 人で始めた勉強会ですが、徐々に和を広げていけたらなと考えています。OOUI を用いたデザイナーとエンジニアの協業に興味のある皆さん、ぜひお声がけください。
 

@@ -201,7 +201,6 @@ function foo() {
     \begin{flushleft}
        \includegraphics[width=0.55\linewidth]{images/chap-guest-hirokinoue/ast.png}
     \end{flushleft}
-	{\small AST}
 //}
 
 //blankline
