@@ -174,6 +174,20 @@ https://twitter.com/Forkwell
 
 ITエンジニアのキャリアに本気で向き合う転職サイト。職務経歴や経験技術などのプロフィールを登録できるポートフォリオサービス、ITエンジニアに特化した求人・転職支援サービス、イベントやセミナーの開催を通じてITエンジニアのキャリア支援を行っています。より満足度の高いサービスを目指しながらITエンジニアのキャリア支援に貢献していきます。
 
+== ランチスポンサー
+
+//embed{
+\begin{center}
+    \includegraphics[width=0.35\linewidth]{images/chap-sponsor-index/algomatic.png}
+\end{center}
+//}
+
+@<em>{株式会社Algomatic}
+
+https://algomatic.jp/
+
+Algomatic（アルゴマティック）はDMMからの20億円の投資で立ち上がった生成AI特化の事業会社です。 生成AI領域で世界を変えるプロダクトをいくつも生み出し、心躍る未来を創ります。現在は法人向けChatGPT活用支援事業であるシゴラクAI、特化型LLM事業のLLM STUDIOを展開しております。
+
 == ブロンズスポンサー
 //embed{
 \begin{center}
@@ -231,16 +245,14 @@ https://twitter.com/Relance_3shake
 
 Relanceはテックカンパニーである株式会社スリーシェイクが運営しているフリーランス特化のITエンジニアの人材紹介サービスです。 エンジニアのニーズが増え、多様化する働き方を応援し『適したスキルを持つエンジニアに、適切な報酬』を提供したいと思い設立されました。 一人一人に寄り添った高単価・長期稼働案件のご紹介はもちろん、フリーランスのキャリア形成を目的とした案件の紹介を実現します。
 
-== ランチスポンサー
-
 //embed{
 \begin{center}
-    \includegraphics[width=0.35\linewidth]{images/chap-sponsor-index/algomatic.png}
+    \includegraphics[width=0.35\linewidth]{images/chap-sponsor-index/oisix.jpg}
 \end{center}
 //}
 
-@<em>{株式会社Algomatic}
+@<em>{オイシックス・ラ・大地株式会社}
 
-https://algomatic.jp/
+https://engineer-recruit.oisixradaichi.co.jp/
 
-Algomatic（アルゴマティック）はDMMからの20億円の投資で立ち上がった生成AI特化の事業会社です。 生成AI領域で世界を変えるプロダクトをいくつも生み出し、心躍る未来を創ります。現在は法人向けChatGPT活用支援事業であるシゴラクAI、特化型LLM事業のLLM STUDIOを展開しております。
+オイシックス・ラ・大地は「これからの食卓、これからの畑」を企業理念として掲げ、食べる人と作る人とを繋ぐ方法をつねに進化させ、持続可能な社会の実現を目指しています。
