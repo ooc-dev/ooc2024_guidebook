@@ -1,7 +1,7 @@
 = PHP製OSSに見るデザインパターンの具体例3選+α
 
 //flushright{
-hirokinoue
+株式会社ホワイトプラス inouehi
 //}
 
 オブジェクト指向、デザインパターン…概念はなんとなくわかった気がするんだけど、どのように使えばいいのだろうか…？そんな感覚を持ったことが誰しも一度はあるのではないでしょうか？そんな時、具体例を参照することで理解を深められると考えています。そこで、PHP製のOSSに見られる生きた事例3つ+αを紹介したいと思います。
@@ -36,13 +36,11 @@ final class EqualsTest extends TestCase
 
 //embed{
     \begin{center}
-        \includegraphics[width=0.7\linewidth]{images/chap-guest-hirokinoue/strategy.png}
+        \includegraphics[width=0.65\linewidth]{images/chap-guest-hirokinoue/strategy.png}
     \end{center}
 //}
 
 それでは見てゆきます。IsEqualと、そこで使用されるComparatorに注目します。Comparatorには実装がいくつかあります。IsEqualは実行時のコンテクスト（テストにおける期待値と実行結果の組み合わせ）に応じて実装を選択します。Comparatorからのぞいてみます。
-
-//blankline
 
 //emlist[Comparator@<fn>{Comparator}][php]{
 abstract public function accepts(/* 略 */): bool;
@@ -52,8 +50,6 @@ abstract public function assertEquals(/* 略 */): void;
 //footnote[Comparator][https://github.com/sebastianbergmann/comparator/blob/146dc7bb46c39d8d42bb0fd8cfdec588f0814f66 /src/Comparator.php ]
 
 ComparatorはacceptsメソッドやassertEqualsを持つ抽象クラスで、その実装は様々あります。例えば配列を比較するArrayComparator、数値を比較するNumericComparatorなどです。続いてIsEqualのevaluateメソッドを見てみます。
-
-//blankline
 
 //emlist[IsEqual@<fn>{IsEqual}][php]{
 public function evaluate(/* 略 */): ?bool
@@ -115,9 +111,11 @@ LaravelはWebアプリケーションフレームワークです。Laravelにお
 
 フレームワークが提供するDispatcherはサブジェクトの役割を果たし、イベントリスナがオブザーバの役割を果たします。Webアプリケーションはこの仕組みを利用するクライアントになります。サブジェクトはオブザーバを保持しますのでDispatcherにイベントリスナを登録する必要があります。また、イベントの種類に応じて通知を受けるべきリスナが異なりますので、イベントとリスナの関連づけも行います。
 
-まとめると、クライアントがイベントやサブジェクトたるDispatcherを生成してオブザーバたるイベントリスナに通知させ、イベントリスナはこれを受けて処理を行います。この仕組みにより、例えば、ユーザー登録すると”ユーザー登録済みイベント”を発行し、これを受けてメールを送信するといった振る舞いを実現できます。
+まとめると、クライアントがイベントやサブジェクトたるDispatcherを生成してオブザーバたるイベントリスナに通知させ、イベントリスナはこれを受けて処理を行います。この仕組みにより、例えば、ユーザー登録すると”ユーザー登録済みイベント”を発行し、これを受けてメールを送信するといった振る舞いを実現できます。  
 
-//blankline
+//embed[latex]{
+\clearpage
+//}
 
 //emlist[events/Dispatcher@<fn>{Dispatcher}][php]{
 // イベントとイベントリスナを登録する
@@ -171,6 +169,8 @@ class FooListener
 
 ※Laravelでは様々なやり方でイベントとリスナの実装が可能ですがほんの一部だけ紹介しました。
 
+//blankline
+
 クラスの関係は以下のようになっています。
 
 //embed{
@@ -219,8 +219,6 @@ Traverserは一つ一つノードを読み込みます。また、TraverserはVi
 
 それでは実装を見てみます。
 
-//blankline
-
 //emlist[NodeTraverser@<fn>{NodeTraverser}][php]{
 class NodeTraverser implements NodeTraverserInterface {
 	public function __construct(NodeVisitor ...$visitors) {
@@ -251,8 +249,6 @@ class NodeTraverser implements NodeTraverserInterface {
 
 NodeVisitorのシグネチャは以下の通りです。
 
-//blankline
-
 //emlist[NodeVisitor@<fn>{NodeVisitor}][php]{
 interface NodeVisitor {
 	public function beforeTraverse(array $nodes);
@@ -265,8 +261,6 @@ interface NodeVisitor {
 //footnote[NodeVisitor][https://github.com/nikic/PHP-Parser/blob/ce019e9ad711e31ee87c2c4c72e538b5240970c3 /lib/PhpParser/NodeVisitor.php ]
 
 NodeVisitorにはFindingVisitorやNameResolverなど様々な実装があります。Visitorの具象クラスはNodeVisitorを実装する抽象クラスであるNodeVisitorAbstractを拡張して作ります。FindingVisitorを見てみます。beforeTraverseやenterNodeを実装していることがわかります。NameResolverも見ていただくと、これと異なる実装を確認していただけます。
-
-//blankline
 
 //emlist[FindingVisitor@<fn>{FindingVisitor}][php]{
 class FindingVisitor extends NodeVisitorAbstract {
@@ -315,7 +309,7 @@ ASTに限らず、順々に読み込んだものに対して処理を行うケ�
         \includegraphics[width=.75\linewidth]{images/contributors/hirokinoue.jpg}
     \end{minipage}
     \begin{minipage}{.89\linewidth}
-        hirokinoue
+        inouehi
 		https://github.com/hirokinoue
     \end{minipage}
     \hspace{1ex}
