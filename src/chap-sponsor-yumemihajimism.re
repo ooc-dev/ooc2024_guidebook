@@ -140,11 +140,11 @@ export const ProfileList: FC<Props> = ({ profiles }) => {
 React では関数コンポーネントの呼び出しは
 
 //emlist[]{
-<ProfleCard />
+<ProfileCard />
 //}
 
 //noindent
-のような素朴なタグ表現で完結しますが、ProfleCard には引数が必要なのでした。それを呼び出しのタイミングで渡してあげます。次のようになります。
+のような素朴なタグ表現で完結しますが、ProfileCard には引数が必要なのでした。それを呼び出しのタイミングで渡してあげます。次のようになります。
 
 //emlist[]{
 <ProfileCard profile={?}>
