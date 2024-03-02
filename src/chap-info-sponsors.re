@@ -6,7 +6,7 @@
 
 //embed{
 \begin{center}
-    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/astah.png}
+    \includegraphics[width=0.38\linewidth]{images/chap-sponsor-index/astah.png}
 \end{center}
 //}
 
@@ -20,7 +20,7 @@ https://twitter.com/astah_ja
 
 //embed{
 \begin{center}
-    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/bengo4.png}
+    \includegraphics[width=0.38\linewidth]{images/chap-sponsor-index/bengo4.png}
 \end{center}
 //}
 
@@ -34,7 +34,7 @@ https://twitter.com/bengo4_creators
 
 //embed{
 \begin{center}
-    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/gmo.png}
+    \includegraphics[width=0.38\linewidth]{images/chap-sponsor-index/gmo.png}
 \end{center}
 //}
 
@@ -52,7 +52,7 @@ GMOインターネットグループは、1995年にインターネット事業�
 
 //embed{
 \begin{center}
-    \includegraphics[width=0.39\linewidth]{images/chap-sponsor-index/codmon.png}
+    \includegraphics[width=0.38\linewidth]{images/chap-sponsor-index/codmon.png}
 \end{center}
 //}
 
@@ -63,6 +63,22 @@ https://www.codmon.co.jp/company/
 https://twitter.com/codmon_dev
 
 「子どもを取り巻く環境をテクノロジーの力でよりよいものに」をミッションに事業を展開し、働く人にとっても働きやすい組織作りを体現。主力プロダクトである保育・教育施設向けICTサービス「CoDMON(コドモン)」をはじめとし、子育てに優しい社会に変わるよう、保育・教育施設の課題解決／保護者の子育て支援／子育ての社会インフラづくりという3つの軸から多角的に環境整備を行い、社会に貢献する。
+
+//embed{
+\begin{center}
+    \includegraphics[width=0.38\linewidth]{images/chap-sponsor-index/beproud.png}
+\end{center}
+//}
+
+@<em>{株式会社ビープラウド}
+
+https://www.beproud.jp/
+
+https://twitter.com/beproud_jp
+
+ビープラウドは、IT勉強会支援プラットフォーム「connpass（コンパス）」の開発・運営をはじめITコミュニティやエンジニアリングの支援に力をいれています。 近年では「要件定義や設計をクリエイティブで楽しいプロセスに革新し、素早く価値を提供する道を開く」というビジョンのもと、システム開発者向けクラウドドキュメントサービス「TRACERY（トレーサリー）」を提供しています。
+
+//pagebreak
 
 == シルバースポンサー
 
