@@ -5,12 +5,12 @@
 //}
 
 //embed{
-    \begin{minipage}{.5\linewidth}
+    \begin{minipage}{.55\linewidth}
         『オブジェクト指向のこころ』という古い本があります。経験ベースで書かれている面白い内容なのですが、
         初心者にとってはちょっと実務の例が本格的すぎて、この分野の本みんな、なんだか意識高くないといけないのかな、って気持ちになります。
         でもオブジェクト指向はそもそも、そして今現実に、無意識でオッケーぐらいの、もっとやさしいことじゃないかなって思うんですね。
     \end{minipage}
-    \begin{minipage}{.45\linewidth}
+    \begin{minipage}{.40\linewidth}
         \centering
         \includegraphics[width=1\linewidth]{images/chap-guest-tanakahisateru/title.png}
     \end{minipage}
