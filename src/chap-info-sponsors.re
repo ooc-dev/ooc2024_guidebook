@@ -263,9 +263,10 @@ Relanceはテックカンパニーである株式会社スリーシェイクが�
 
 //embed{
 \begin{center}
-    \includegraphics[width=0.35\linewidth]{images/chap-sponsor-index/oisix.png}
+    \includegraphics[width=0.35\linewidth]{images/chap-sponsor-index/oisix1.png}
 \end{center}
 //}
+
 
 @<em>{オイシックス・ラ・大地株式会社}
 
